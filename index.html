@@ -230,6 +230,35 @@
       color: #333;
     }
 
+    /* Team section */
+    .team-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 12px;
+    }
+
+    .team-member {
+      background: #f9fbff;
+      padding: 12px 14px;
+      border-radius: 8px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .team-member h4 {
+      margin: 0 0 6px 0;
+      color: #003366;
+      font-size: 15px;
+    }
+
+    .team-member p {
+      margin: 0;
+      color: #333;
+      font-size: 14px;
+    }
+
     .whatsapp {
       background: #25d366;
       color: #fff;
@@ -276,6 +305,7 @@
       text-decoration: none;
     }
 
+    /* Responsive rules */
     @media (min-width: 880px) {
       .projects {
         grid-template-columns: 1fr 1fr;
@@ -286,10 +316,13 @@
       .services-grid {
         grid-template-columns: repeat(2, 1fr);
       }
+      .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     @media (max-width: 879px) {
-      .projects-examples {
+      .projects-list {
         grid-template-columns: 1fr 1fr;
       }
     }
@@ -299,6 +332,9 @@
         grid-template-columns: 1fr;
       }
       .projects-list {
+        grid-template-columns: 1fr;
+      }
+      .team-grid {
         grid-template-columns: 1fr;
       }
       .hero h1 { font-size: 32px; padding: 0; }
@@ -389,6 +425,54 @@
         </p>
         <p>
           Committed to delivering practical engineering solutions with safety, quality and client satisfaction as priorities.
+        </p>
+      </section>
+
+      <section class="card" id="team" aria-labelledby="team-title">
+        <h2 id="team-title">Our Team</h2>
+
+        <p>
+          Nilereyal Engineering Consultants is supported by a multidisciplinary team of experienced professionals dedicated to delivering practical, innovative, and sustainable infrastructure solutions throughout Papua New Guinea. Our team combines technical expertise, industry knowledge, and project delivery experience to provide integrated engineering, surveying, design, and construction consulting services across a wide range of infrastructure projects.
+        </p>
+
+        <p>
+          Working collaboratively, our professionals bring diverse skills and perspectives that enable us to develop well-coordinated, cost-effective, and client-focused solutions from project conception through to completion.
+        </p>
+
+        <div class="team-grid" role="list">
+          <div class="team-member" role="listitem">
+            <h4>Yawa Kimin</h4>
+            <p>Civil Engineer</p>
+          </div>
+
+          <div class="team-member" role="listitem">
+            <h4>Kennedy Graham</h4>
+            <p>Surveyor</p>
+          </div>
+
+          <div class="team-member" role="listitem">
+            <h4>Kambua Ombo</h4>
+            <p>Mechanical Engineer</p>
+          </div>
+
+          <div class="team-member" role="listitem">
+            <h4>Allan Kouro</h4>
+            <p>Building Engineer</p>
+          </div>
+
+          <div class="team-member" role="listitem">
+            <h4>Robert Korul</h4>
+            <p>Electrical Engineer</p>
+          </div>
+
+          <div class="team-member" role="listitem">
+            <h4>Whilliam Ipou</h4>
+            <p>Architect</p>
+          </div>
+        </div>
+
+        <p style="margin-top:12px;">
+          Together, our team provides expertise in infrastructure planning, engineering design, surveying, project management, engineering documentation, building development, utility services, construction supervision, and technical advisory services. By combining our knowledge and experience, we are committed to delivering safe, sustainable, and reliable infrastructure solutions that support the growth and development of communities across Papua New Guinea.
         </p>
       </section>
 
@@ -544,12 +628,12 @@
 
           <div class="projects-list" aria-hidden="false">
             <div class="project-item">
-              <h4>Roads & Bridges</h4>
+              <h4>Roads &amp; Bridges</h4>
               <p>Design and rehabilitation of transport links to improve connectivity.</p>
             </div>
 
             <div class="project-item">
-              <h4>Water & Drainage Systems</h4>
+              <h4>Water &amp; Drainage Systems</h4>
               <p>Water supply networks, stormwater and drainage solutions.</p>
             </div>
 
