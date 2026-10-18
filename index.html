@@ -180,6 +180,7 @@
       line-height: 1.8;
     }
 
+    /* Services grid (kept from previous) */
     .services-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -190,6 +191,61 @@
       background: #f8fbff;
       border-radius: 8px;
       padding: 12px 14px;
+    }
+
+    /* Featured Projects two-column layout */
+    .projects {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .projects-intro {
+      padding-right: 6px;
+    }
+
+    .projects-examples {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .project-card {
+      background: #fafcff;
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+    }
+
+    .project-image {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .project-body {
+      padding: 10px 12px;
+    }
+
+    .project-body h4 {
+      margin-bottom: 6px;
+      font-size: 16px;
+      color: #003366;
+    }
+
+    .project-body p {
+      margin: 0;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .project-grid-examples {
+      display: grid;
+      gap: 12px;
     }
 
     .whatsapp {
@@ -238,40 +294,39 @@
       text-decoration: none;
     }
 
-    @media (min-width: 720px) {
+    /* Responsive rules */
+    @media (min-width: 880px) {
+      .projects {
+        grid-template-columns: 1fr 1fr;
+      }
+      .projects-examples {
+        grid-template-columns: 1fr 1fr;
+      }
       .services-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
 
-    @media (max-width: 768px) {
-      .nav-inner {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
+    @media (max-width: 879px) {
+      .projects-examples {
+        grid-template-columns: 1fr 1fr;
       }
+      .project-image {
+        height: 100px;
+      }
+    }
 
-      nav.nav-links {
-        width: 100%;
-        flex-wrap: wrap;
+    @media (max-width: 520px) {
+      .projects {
+        grid-template-columns: 1fr;
       }
-
-      .hero {
-        padding: 80px 20px;
+      .projects-examples {
+        grid-template-columns: 1fr;
       }
-
-      .hero h1 {
-        font-size: 32px;
+      .project-image {
+        height: 140px;
       }
-
-      .logo {
-        width: 48px;
-        height: 48px;
-      }
-
-      .brand-text {
-        font-size: 1rem;
-      }
+      .hero h1 { font-size: 32px; padding: 0; }
     }
   </style>
 </head>
@@ -496,18 +551,74 @@
       <section class="card" id="projects" aria-labelledby="projects-title">
         <h2 id="projects-title">Featured Projects</h2>
 
-        <p>
-          At Nilereyal Engineering Consultants, we believe infrastructure is more than concrete, steel, and technical drawings. It is about creating lasting value for people and communities. Our multidisciplinary team has the capability to plan, design, manage, and deliver a diverse range of infrastructure projects that improve accessibility, strengthen public services, and support sustainable development throughout Papua New Guinea.
-        </p>
+        <div class="projects">
+          <div class="projects-intro">
+            <p>
+              We deliver infrastructure that creates lasting value for people and communities. Our multidisciplinary team plans, designs, manages and delivers projects that improve accessibility, strengthen public services and support sustainable development across Papua New Guinea.
+            </p>
 
-        <p>
-          Drawing on the expertise of our Civil Engineers, Surveyors, Building Engineers, Architects, Electrical Engineers, and Mechanical Engineers, we provide integrated solutions across transportation networks, public facilities, commercial developments, utility infrastructure, water and drainage systems, community facilities, and site development projects. Our approach combines technical excellence, innovation, and practical project delivery to ensure successful outcomes for our clients and stakeholders.
-        </p>
+            <p>
+              Below are examples of project types we design and deliver — click any card to learn more (placeholder links).
+            </p>
+          </div>
 
-        <p>
-          Whether supporting strategic infrastructure planning, engineering design, surveying, project management, construction supervision, or technical advisory services, our team remains committed to delivering infrastructure that is safe, sustainable, cost-effective, and aligned with the long-term needs of the communities it serves.
-        </p>
+          <div class="projects-examples">
+            <!-- Example 1 -->
+            <article class="project-card">
+              <img class="project-image" src="https://images.unsplash.com/photo-1503919545880-20b6b1f2f6d1?auto=format&fit=crop&w=800&q=60" alt="Road and bridge project example" />
+              <div class="project-body">
+                <h4>Roads & Bridges</h4>
+                <p>Design and rehabilitation of transport links to improve connectivity.</p>
+              </div>
+            </article>
 
+            <!-- Example 2 -->
+            <article class="project-card">
+              <img class="project-image" src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=800&q=60" alt="Water and drainage systems example" />
+              <div class="project-body">
+                <h4>Water & Drainage Systems</h4>
+                <p>Water supply networks, stormwater and drainage solutions.</p>
+              </div>
+            </article>
+
+            <!-- Example 3 -->
+            <article class="project-card">
+              <img class="project-image" src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=60" alt="Public facility example" />
+              <div class="project-body">
+                <h4>Public Facilities</h4>
+                <p>Design of schools, health centres and community infrastructure.</p>
+              </div>
+            </article>
+
+            <!-- Example 4 -->
+            <article class="project-card">
+              <img class="project-image" src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=800&q=60" alt="Utility infrastructure example" />
+              <div class="project-body">
+                <h4>Utility Infrastructure</h4>
+                <p>Electrical distribution, street lighting and utility coordination.</p>
+              </div>
+            </article>
+
+            <!-- Example 5 -->
+            <article class="project-card">
+              <img class="project-image" src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=800&q=60" alt="Commercial development example" />
+              <div class="project-body">
+                <h4>Commercial Development</h4>
+                <p>Integrated design support for commercial and public developments.</p>
+              </div>
+            </article>
+
+            <!-- Example 6 -->
+            <article class="project-card">
+              <img class="project-image" src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=800&q=60" alt="Site development example" />
+              <div class="project-body">
+                <h4>Site Development</h4>
+                <p>Earthworks, site planning and construction supervision.</p>
+              </div>
+            </article>
+
+          </div>
+        </div>
       </section>
 
       <section class="card" aria-labelledby="commitment-title">
