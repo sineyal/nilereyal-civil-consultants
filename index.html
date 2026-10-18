@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +8,13 @@
 
 <style>
 
-body{
+*{
     margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
     font-family:Arial, sans-serif;
     background:#eef1f5;
     color:#333;
@@ -50,34 +54,34 @@ body{
 
     background-size:cover;
     background-position:center;
-
-    color:white;
     text-align:center;
-    padding:120px 20px;
+    color:white;
+    padding:140px 20px;
 }
 
 .hero h1{
-    font-size:52px;
-    margin-bottom:10px;
+    font-size:56px;
+    margin-bottom:20px;
 }
 
 .hero p{
-    font-size:22px;
+    font-size:24px;
+    margin-bottom:15px;
 }
 
 .btn{
     background:#FFD700;
     color:#003366;
-    padding:15px 30px;
-    border-radius:5px;
     text-decoration:none;
-    font-weight:bold;
+    padding:15px 30px;
+    border-radius:6px;
     display:inline-block;
+    font-weight:bold;
     margin-top:20px;
 }
 
 .btn:hover{
-    background:#f2c300;
+    background:#f0c400;
 }
 
 /* Layout */
@@ -85,7 +89,7 @@ body{
 .container{
     max-width:1100px;
     margin:auto;
-    padding:20px;
+    padding:30px 20px;
 }
 
 .card{
@@ -98,32 +102,37 @@ body{
 
 .card h2{
     color:#003366;
-    margin-top:0;
+    margin-bottom:20px;
+}
+
+.card h3{
+    margin-bottom:10px;
 }
 
 .card p{
-    line-height:1.6;
     margin:12px 0;
+    line-height:1.6;
 }
 
 .card ul{
-    line-height:1.8;
+    padding-left:20px;
+    line-height:2;
 }
 
-/* WhatsApp */
+/* Contact Buttons */
 
 .whatsapp{
     background:#25D366;
     color:white;
-    padding:12px 22px;
-    border-radius:6px;
     text-decoration:none;
-    font-weight:bold;
+    padding:12px 20px;
+    border-radius:6px;
     display:inline-block;
+    font-weight:bold;
 }
 
 .whatsapp:hover{
-    background:#1fa851;
+    background:#1da851;
 }
 
 /* Footer */
@@ -140,12 +149,20 @@ footer h3{
     margin-bottom:10px;
 }
 
+footer p{
+    margin:8px 0;
+}
+
 /* Mobile */
 
 @media(max-width:768px){
 
 .hero h1{
     font-size:36px;
+}
+
+.hero p{
+    font-size:18px;
 }
 
 .navbar a{
@@ -164,31 +181,33 @@ footer h3{
 <!-- Navigation -->
 
 <nav class="navbar">
+    #aboutAbout</a>
+    #servicesServices</a>
+    #projectsProjects</a>
+    #contactContact</a>
+</nav>
 
-#aboutAbout</a>
-<aervicesServices</a>
-<a href="#projects">Projects</a>
-ontact">Contact</a>
+<!-- Hero -->
 
-- Hero Section -->
+<section class="hero">
 
-<div class="hero">
+    <h1>Nilereyal Civil Consultants</h1>
 
-<h1>Nilereyal Civil Consultants</h1>
+    <p>Your Project, My Priority</p>
 
-<p>
-Your Project, My Priority
-</p>
+    <p>
+        Project Management • Mine Dewatering • Civil Engineering • Infrastructure Development
+    </p>
 
-<p>
-Project Management • Mine Dewatering • Civil Engineering • Infrastructure Development
-</p>
+    <p>
+        Delivering practical engineering solutions throughout Papua New Guinea.
+    </p>
 
-#contact
-Request Consultation
-</a>
+    #contact
+        Request Consultation
+    </a>
 
-</div>
+</section>
 
 <div class="container">
 
@@ -196,13 +215,13 @@ Request Consultation
 
 <div class="card" id="about">
 
-<h2>About Us</h2>
+    <h2>About Us</h2>
 
-<p>
-Nilereyal Civil Consultants provides professional engineering,
-project management, mine dewatering, infrastructure development
-and construction consulting services throughout Papua New Guinea.
-</p>
+    <p>
+        Nilereyal Civil Consultants provides professional engineering,
+        project management, mine dewatering, infrastructure development
+        and construction consulting services throughout Papua New Guinea.
+    </p>
 
 </div>
 
@@ -210,24 +229,24 @@ and construction consulting services throughout Papua New Guinea.
 
 <div class="card">
 
-<h2>Director Profile</h2>
+    <h2>Director Profile</h2>
 
-<h3>Paul Sineyal</h3>
+    <h3>Paul Sineyal</h3>
 
-<p>
-<strong>Project Engineer - Dewatering & Mine Projects</strong>
-</p>
+    <p>
+        <strong>Project Engineer – Dewatering & Mine Projects</strong>
+    </p>
 
-<p>
-Experienced Civil Engineer specializing in mine dewatering,
-infrastructure development, construction supervision,
-project management and technical advisory services.
-</p>
+    <p>
+        Experienced Civil Engineer specializing in mine dewatering,
+        infrastructure development, construction supervision,
+        project management and technical advisory services.
+    </p>
 
-<p>
-Committed to delivering practical engineering solutions with
-safety, quality and client satisfaction as priorities.
-</p>
+    <p>
+        Committed to delivering practical engineering solutions with
+        safety, quality and client satisfaction as priorities.
+    </p>
 
 </div>
 
@@ -235,15 +254,15 @@ safety, quality and client satisfaction as priorities.
 
 <div class="card">
 
-<h2>Why Choose Us?</h2>
+    <h2>Why Choose Us?</h2>
 
-<ul>
-<li>Experienced Mine Project Delivery</li>
-<li>Strong Safety Culture</li>
-<li>Practical Engineering Solutions</li>
-<li>Cost Effective Project Management</li>
-<li>Client-Focused Service</li>
-</ul>
+    <ul>
+        <li>Experienced Mine Project Delivery</li>
+        <li>Strong Safety Culture</li>
+        <li>Practical Engineering Solutions</li>
+        <li>Cost Effective Project Management</li>
+        <li>Client-Focused Service</li>
+    </ul>
 
 </div>
 
@@ -251,19 +270,19 @@ safety, quality and client satisfaction as priorities.
 
 <div class="card" id="services">
 
-<h2>Our Services</h2>
+    <h2>Our Services</h2>
 
-<ul>
-<li>📋 Project Management</li>
-<li>💧 Mine Dewatering</li>
-<li>🏗 Civil Engineering Design</li>
-<li>🚧 Infrastructure Development</li>
-<li>👷 Construction Supervision</li>
-<li>📑 Contract Administration</li>
-<li>📊 Project Controls</li>
-<li>⚠ Risk Management</li>
-<li>📘 Technical Advisory Services</li>
-</ul>
+    <ul>
+        <li>📋 Project Management</li>
+        <li>💧 Mine Dewatering</li>
+        <li>🏗 Civil Engineering Design</li>
+        <li>🚧 Infrastructure Development</li>
+        <li>👷 Construction Supervision</li>
+        <li>📑 Contract Administration</li>
+        <li>📊 Project Controls</li>
+        <li>⚠ Risk Management</li>
+        <li>📘 Technical Advisory Services</li>
+    </ul>
 
 </div>
 
@@ -271,16 +290,32 @@ safety, quality and client satisfaction as priorities.
 
 <div class="card" id="projects">
 
-<h2>Featured Projects</h2>
+    <h2>Featured Projects</h2>
 
-<ul>
-<li>Mine Dewatering Systems</li>
-<li>Pump Stations and Pipelines</li>
-<li>Civil Infrastructure Projects</li>
-<li>Drainage System Designs</li>
-<li>Construction Supervision</li>
-<li>Project Management Services</li>
-</ul>
+    <ul>
+        <li>Mine Dewatering Systems</li>
+        <li>Pump Stations and Pipelines</li>
+        <li>Civil Infrastructure Projects</li>
+        <li>Drainage System Designs</li>
+        <li>Construction Supervision</li>
+        <li>Project Management Services</li>
+    </ul>
+
+</div>
+
+<!-- Commitment -->
+
+<div class="card">
+
+    <h2>Our Commitment</h2>
+
+    <ul>
+        <li>✓ Safety First</li>
+        <li>✓ Quality Focused</li>
+        <li>✓ Client Driven</li>
+        <li>✓ Practical Solutions</li>
+        <li>✓ Reliable Project Delivery</li>
+    </ul>
 
 </div>
 
@@ -288,59 +323,8 @@ safety, quality and client satisfaction as priorities.
 
 <div class="card" id="contact">
 
-<h2>Contact Us</h2>
+    <h2>Contact Us</h2>
 
-<p>
-📧 Email:
-<a href="mailto:info@nilereyal.com">
-
-</a>
-</p>
-
-<p>
-📞 Phone:
-+675 7450 4509
-</p>
-
-<p>
-📍 Location:
-Papua New Guinea
-</p>
-
-<p>
-
-<a class="whatsapp"
-href="https://wa.me/67574504509"
-target="_blank">
-
-📱 Chat on WhatsApp
-
-</a>
-
-</p>
-
-</div>
-
-</div>
-
-<!-- Footer -->
-
-<footer>
-
-<h3>Nilereyal Civility</p>
-
-<p>
-Project Management |
-Mine Dewatering |
-Civil Engineering |
-Infrastructure Development
-</p>
-
-<p>
-© 2026 Nilereyal Civil Consultants
-</p>
-
-</footer>
-
-</body>
-</html>
+    <p>
+        📧 Email:
+        info@
