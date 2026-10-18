@@ -14,9 +14,13 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-    font-family:Arial, sans-serif;
-    background:#eef1f5;
+    font-family: Arial, sans-serif;
+    background:#f4f6f9;
     color:#333;
 }
 
@@ -24,11 +28,11 @@ body{
 
 .navbar{
     background:#001f3f;
-    padding:15px;
-    text-align:center;
     position:sticky;
     top:0;
     z-index:1000;
+    padding:15px;
+    text-align:center;
 }
 
 .navbar a{
@@ -42,21 +46,20 @@ body{
     color:#FFD700;
 }
 
-/* Hero */
+/* Hero Section */
 
 .hero{
     background:
     linear-gradient(
-        rgba(0,0,0,0.6),
-        rgba(0,0,0,0.6)
+        rgba(0,0,0,0.65),
+        rgba(0,0,0,0.65)
     ),
     url('https://images.unsplash.com/photo-1504307651254-35680f356dfd');
-
     background-size:cover;
     background-position:center;
     text-align:center;
     color:white;
-    padding:140px 20px;
+    padding:150px 20px;
 }
 
 .hero h1{
@@ -64,75 +67,94 @@ body{
     margin-bottom:20px;
 }
 
-.hero p{
-    font-size:24px;
+.hero .tagline{
+    font-size:28px;
     margin-bottom:15px;
 }
 
+.hero .services{
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+.hero .description{
+    font-size:18px;
+    margin-bottom:30px;
+}
+
 .btn{
+    display:inline-block;
     background:#FFD700;
     color:#003366;
     text-decoration:none;
     padding:15px 30px;
     border-radius:6px;
-    display:inline-block;
     font-weight:bold;
-    margin-top:20px;
 }
 
 .btn:hover{
-    background:#f0c400;
+    background:#f2c300;
 }
 
-/* Layout */
+/* Main Content */
 
 .container{
     max-width:1100px;
     margin:auto;
-    padding:30px 20px;
+    padding:40px 20px;
 }
 
 .card{
     background:white;
-    padding:30px;
-    margin:25px 0;
+    padding:35px;
+    margin-bottom:30px;
     border-radius:12px;
     box-shadow:0 2px 10px rgba(0,0,0,0.10);
 }
 
 .card h2{
+    text-align:center;
     color:#003366;
-    margin-bottom:20px;
+    margin-bottom:25px;
 }
 
 .card h3{
-    margin-bottom:10px;
+    text-align:center;
+    margin-bottom:15px;
 }
 
 .card p{
-    margin:12px 0;
-    line-height:1.6;
+    line-height:1.7;
+    margin-bottom:15px;
 }
 
 .card ul{
-    padding-left:20px;
-    line-height:2;
+    list-style:none;
+    padding:0;
 }
 
-/* Contact Buttons */
+.card li{
+    margin:12px 0;
+}
+
+/* Contact */
+
+.contact-info p{
+    margin-bottom:18px;
+}
 
 .whatsapp{
+    display:inline-block;
     background:#25D366;
     color:white;
     text-decoration:none;
     padding:12px 20px;
     border-radius:6px;
-    display:inline-block;
     font-weight:bold;
 }
 
 .whatsapp:hover{
-    background:#1da851;
+    background:#1ca64c;
 }
 
 /* Footer */
@@ -141,33 +163,36 @@ footer{
     background:#000;
     color:white;
     text-align:center;
-    padding:40px 20px;
-    margin-top:40px;
+    padding:50px 20px;
 }
 
 footer h3{
-    margin-bottom:10px;
+    margin-bottom:15px;
 }
 
 footer p{
-    margin:8px 0;
+    margin:10px 0;
 }
 
-/* Mobile */
+/* Responsive */
 
 @media(max-width:768px){
 
 .hero h1{
-    font-size:36px;
+    font-size:38px;
 }
 
-.hero p{
+.hero .tagline{
+    font-size:22px;
+}
+
+.hero .services{
     font-size:18px;
 }
 
 .navbar a{
     display:block;
-    margin:10px;
+    margin:10px 0;
 }
 
 }
@@ -193,13 +218,15 @@ footer p{
 
     <h1>Nilereyal Civil Consultants</h1>
 
-    <p>Your Project, My Priority</p>
+    <p class="tagline">
+        Your Project, My Priority
+    </p>
 
-    <p>
+    <p class="services">
         Project Management • Mine Dewatering • Civil Engineering • Infrastructure Development
     </p>
 
-    <p>
+    <p class="description">
         Delivering practical engineering solutions throughout Papua New Guinea.
     </p>
 
@@ -211,120 +238,174 @@ footer p{
 
 <div class="container">
 
-<!-- About -->
+    <!-- About -->
 
-<div class="card" id="about">
+    <div class="card" id="about">
 
-    <h2>About Us</h2>
+        <h2>About Us</h2>
+
+        <p>
+            Nilereyal Civil Consultants provides professional engineering,
+            project management, mine dewatering, infrastructure development,
+            construction supervision and technical advisory services
+            throughout Papua New Guinea.
+        </p>
+
+    </div>
+
+    <!-- Director -->
+
+    <div class="card">
+
+        <h2>Director Profile</h2>
+
+        <h3>Paul Sineyal</h3>
+
+        <p style="text-align:center;">
+            <strong>Project Engineer - Dewatering & Mine Projects</strong>
+        </p>
+
+        <p>
+            Experienced Civil Engineer specializing in mine dewatering,
+            infrastructure development, construction supervision,
+            project management and technical advisory services.
+        </p>
+
+        <p>
+            Committed to delivering practical engineering solutions
+            with safety, quality and client satisfaction as priorities.
+        </p>
+
+    </div>
+
+    <!-- Why Choose Us -->
+
+    <div class="card">
+
+        <h2>Why Choose Us?</h2>
+
+        <ul>
+            <li>✅ Experienced Mine Project Delivery</li>
+            <li>✅ Strong Safety Culture</li>
+            <li>✅ Practical Engineering Solutions</li>
+            <li>✅ Cost Effective Project Management</li>
+            <li>✅ Client-Focused Service</li>
+        </ul>
+
+    </div>
+
+    <!-- Services -->
+
+    <div class="card" id="services">
+
+        <h2>Our Services</h2>
+
+        <ul>
+            <li>📋 Project Management</li>
+            <li>💧 Mine Dewatering</li>
+            <li>🏗 Civil Engineering Design</li>
+            <li>🚧 Infrastructure Development</li>
+            <li>👷 Construction Supervision</li>
+            <li>📑 Contract Administration</li>
+            <li>📊 Project Controls</li>
+            <li>⚠ Risk Management</li>
+            <li>📘 Technical Advisory Services</li>
+        </ul>
+
+    </div>
+
+    <!-- Projects -->
+
+    <div class="card" id="projects">
+
+        <h2>Featured Projects</h2>
+
+        <ul>
+            <li>Mine Dewatering Systems</li>
+            <li>Pump Stations and Pipelines</li>
+            <li>Civil Infrastructure Projects</li>
+            <li>Drainage System Designs</li>
+            <li>Construction Supervision</li>
+            <li>Project Management Services</li>
+        </ul>
+
+    </div>
+
+    <!-- Commitment -->
+
+    <div class="card">
+
+        <h2>Our Commitment</h2>
+
+        <ul>
+            <li>✓ Safety First</li>
+            <li>✓ Quality Focused</li>
+            <li>✓ Client Driven</li>
+            <li>✓ Practical Solutions</li>
+            <li>✓ Reliable Project Delivery</li>
+        </ul>
+
+    </div>
+
+    <!-- Contact -->
+
+    <div class="card contact-info" id="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>
+            📧 Email:
+            info@nilereyal.cominfo@nilereyal.com</a>
+        </p>
+
+        <p>
+            📞 Phone:
+            +675 7450 4509
+        </p>
+
+        <p>
+            📍 Location:
+            Papua New Guinea
+        </p>
+
+        <p>
+            https://wa.me/67574504509
+                📱 Chat on WhatsApp
+            </a>
+        </p>
+
+    </div>
+
+</div>
+
+<!-- Footer -->
+
+<footer>
+
+    <h3>Nilereyal Civil Consultants</h3>
+
+    <p>Your Project, My Priority</p>
 
     <p>
-        Nilereyal Civil Consultants provides professional engineering,
-        project management, mine dewatering, infrastructure development
-        and construction consulting services throughout Papua New Guinea.
+        Project Management |
+        Mine Dewatering |
+        Civil Engineering |
+        Infrastructure Development
     </p>
 
-</div>
-
-<!-- Director -->
-
-<div class="card">
-
-    <h2>Director Profile</h2>
-
-    <h3>Paul Sineyal</h3>
-
     <p>
-        <strong>Project Engineer – Dewatering & Mine Projects</strong>
+        Email: info@nilereyal.com
     </p>
 
     <p>
-        Experienced Civil Engineer specializing in mine dewatering,
-        infrastructure development, construction supervision,
-        project management and technical advisory services.
+        Phone: +675 7450 4509
     </p>
 
     <p>
-        Committed to delivering practical engineering solutions with
-        safety, quality and client satisfaction as priorities.
+        © 2026 Nilereyal Civil Consultants
     </p>
 
-</div>
+</footer>
 
-<!-- Why Choose Us -->
-
-<div class="card">
-
-    <h2>Why Choose Us?</h2>
-
-    <ul>
-        <li>Experienced Mine Project Delivery</li>
-        <li>Strong Safety Culture</li>
-        <li>Practical Engineering Solutions</li>
-        <li>Cost Effective Project Management</li>
-        <li>Client-Focused Service</li>
-    </ul>
-
-</div>
-
-<!-- Services -->
-
-<div class="card" id="services">
-
-    <h2>Our Services</h2>
-
-    <ul>
-        <li>📋 Project Management</li>
-        <li>💧 Mine Dewatering</li>
-        <li>🏗 Civil Engineering Design</li>
-        <li>🚧 Infrastructure Development</li>
-        <li>👷 Construction Supervision</li>
-        <li>📑 Contract Administration</li>
-        <li>📊 Project Controls</li>
-        <li>⚠ Risk Management</li>
-        <li>📘 Technical Advisory Services</li>
-    </ul>
-
-</div>
-
-<!-- Projects -->
-
-<div class="card" id="projects">
-
-    <h2>Featured Projects</h2>
-
-    <ul>
-        <li>Mine Dewatering Systems</li>
-        <li>Pump Stations and Pipelines</li>
-        <li>Civil Infrastructure Projects</li>
-        <li>Drainage System Designs</li>
-        <li>Construction Supervision</li>
-        <li>Project Management Services</li>
-    </ul>
-
-</div>
-
-<!-- Commitment -->
-
-<div class="card">
-
-    <h2>Our Commitment</h2>
-
-    <ul>
-        <li>✓ Safety First</li>
-        <li>✓ Quality Focused</li>
-        <li>✓ Client Driven</li>
-        <li>✓ Practical Solutions</li>
-        <li>✓ Reliable Project Delivery</li>
-    </ul>
-
-</div>
-
-<!-- Contact -->
-
-<div class="card" id="contact">
-
-    <h2>Contact Us</h2>
-
-    <p>
-        📧 Email:
-        info@
+</body>
+</html>
