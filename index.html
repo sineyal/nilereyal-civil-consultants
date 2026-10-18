@@ -7,6 +7,7 @@
   <title>Nilereyal Civil Consultants</title>
 
   <style>
+    /* Base reset */
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
@@ -16,27 +17,84 @@
       line-height: 1.5;
     }
 
-    /* Navigation */
+    /* Skip link for keyboard users */
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+    .skip-link:focus {
+      left: 12px;
+      top: 12px;
+      width: auto;
+      height: auto;
+      padding: 8px 12px;
+      background: #001f3f;
+      color: #fff;
+      z-index: 2000;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+
+    /* Navigation / Header */
     header.navbar {
       background: #001f3f;
-      padding: 15px;
+      padding: 12px 18px;
       position: sticky;
       top: 0;
       z-index: 1000;
-      text-align: center;
     }
 
-    .navbar a {
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      color: #fff;
+      gap: 12px;
+      white-space: nowrap;
+    }
+
+    .logo {
+      width: 54px;
+      height: 54px;
+      object-fit: contain;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.06);
+      padding: 4px;
+      display: block;
+    }
+
+    .brand-text {
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      color: #fff;
+    }
+
+    nav.nav-links { display: flex; align-items: center; gap: 12px; }
+
+    nav.nav-links a {
       color: #fff;
       text-decoration: none;
-      margin: 0 14px;
       font-weight: 700;
-      display: inline-block;
-      padding: 6px 8px;
+      padding: 8px 6px;
+      border-radius: 4px;
     }
 
-    .navbar a:focus,
-    .navbar a:hover {
+    nav.nav-links a:hover,
+    nav.nav-links a:focus {
       color: #ffd700;
       outline: none;
     }
@@ -67,9 +125,8 @@
       font-weight: 700;
       margin-top: 18px;
     }
-
     .btn:hover,
-    .btn:focus { background: #f0c400; }
+    .btn:focus { background: #f0c400; outline: none; }
 
     /* Layout */
     .container {
@@ -102,7 +159,7 @@
       font-weight: 700;
     }
     .whatsapp:hover,
-    .whatsapp:focus { background: #1da851; }
+    .whatsapp:focus { background: #1da851; outline: none; }
 
     /* Footer */
     footer {
@@ -113,27 +170,57 @@
       margin-top: 28px;
     }
 
-    footer p { margin: 6px 0; }
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .footer-logo {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.06);
+      padding: 4px;
+    }
+
+    footer a { color: #ffd700; text-decoration: none; }
 
     /* Mobile */
     @media (max-width: 768px) {
+      .nav-inner { flex-direction: column; align-items: flex-start; gap: 10px; }
+      nav.nav-links { width: 100%; display: flex; flex-wrap: wrap; gap: 8px; }
       .hero { padding: 80px 20px; }
       .hero h1 { font-size: 32px; }
-      .hero p.lead { font-size: 16px; }
-      header.navbar a { display: inline-block; margin: 6px 8px; }
+      .logo { width: 48px; height: 48px; }
+      .brand-text { font-size: 1rem; }
     }
   </style>
 </head>
-<body>
 
-  <header class="navbar" role="navigation" aria-label="Main navigation">
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="navbar" role="banner">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="Nilereyal Civil Consultants home">
+        <img class="logo" src="https://raw.githubusercontent.com/sineyal/nilereyal-civil-consultants/main/Designer%20(22).png" alt="Nilereyal Civil Consultants logo" />
+        <span class="brand-text">Nilereyal Civil Consultants</span>
+      </a>
+
+      <nav class="nav-links" role="navigation" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
+  <main id="main">
     <section class="hero" aria-labelledby="hero-title">
       <h1 id="hero-title">Nilereyal Civil Consultants</h1>
       <p class="lead">Your Project, My Priority</p>
@@ -155,7 +242,7 @@
 
       <section class="card" aria-labelledby="director-title">
         <h2 id="director-title">Director Profile</h2>
-        <h3>Paul Hossy</h3>
+        <h3>Paul Sineyal</h3>
         <p><strong>Project Engineer – Dewatering &amp; Mine Projects</strong></p>
         <p>
           Experienced Civil Engineer specializing in mine dewatering,
@@ -231,8 +318,7 @@
         </p>
 
         <p>
-          <strong>Location:</strong>
-          Papua New Guinea
+          <strong>Location:</strong> Papua New Guinea
         </p>
 
         <p>
@@ -245,14 +331,19 @@
     </div>
   </main>
 
-  <footer>
-    <h3>Nilereyal Civil Consultants</h3>
-    <p>Your Project, My Priority</p>
+  <footer role="contentinfo">
+    <div class="footer-brand">
+      <img class="footer-logo" src="https://raw.githubusercontent.com/sineyal/nilereyal-civil-consultants/main/Designer%20(22).png" alt="Nilereyal Civil Consultants logo" />
+      <div>
+        <h3>Nilereyal Civil Consultants</h3>
+        <p>Your Project, My Priority</p>
+      </div>
+    </div>
+
     <p>Project Management | Mine Dewatering | Civil Engineering | Infrastructure Development</p>
-    <p>Email: <a href="mailto:info@nilereyal.com" style="color:#ffd700; text-decoration:none;">info@nilereyal.com</a></p>
-    <p>Phone: <a href="tel:+67574504509" style="color:#ffd700; text-decoration:none;">+675 7450 4509</a></p>
+    <p>Email: <a href="mailto:info@nilereyal.com">info@nilereyal.com</a></p>
+    <p>Phone: <a href="tel:+67574504509">+675 7450 4509</a></p>
     <p>© 2026 Nilereyal Civil Consultants</p>
   </footer>
-
 </body>
 </html>
