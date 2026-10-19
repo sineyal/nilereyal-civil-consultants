@@ -193,7 +193,7 @@
       padding: 12px 14px;
     }
 
-    /* Projects two-column text layout */
+    /* Projects two-column text layout (no images) */
     .projects {
       display: grid;
       grid-template-columns: 1fr;
@@ -230,7 +230,7 @@
       color: #333;
     }
 
-    /* Founder/director profile layout */
+    /* Director profile layout */
     .profile-wrap {
       display: flex;
       align-items: flex-start;
@@ -339,9 +339,6 @@
     @media (min-width: 880px) {
       .projects {
         grid-template-columns: 1fr 1fr;
-      }
-      .projects-list {
-        grid-template-columns: 1fr;
       }
       .services-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -487,11 +484,11 @@
         </p>
 
         <div class="team-grid" role="list">
-          <!-- Kennedy Graham (updated with uploaded photo) -->
+          <!-- Kennedy Graham (updated to use provided GitHub image) -->
           <div class="team-member" role="listitem">
             <img
               class="member-photo"
-              src="assets/kennedy-graham.jpg"
+              src="https://raw.githubusercontent.com/sineyal/nilereyal-civil-consultants/main/WhatsApp%20Image%202026-10-19%20at%2010.32.46%20AM.jpeg"
               alt="Kennedy Graham — Surveyor"
             />
             <div class="member-info">
